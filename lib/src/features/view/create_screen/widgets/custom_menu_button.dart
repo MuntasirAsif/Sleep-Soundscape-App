@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:soundscape/core/constant/spacing.dart';
 import 'package:soundscape/core/theme/theme_extensions/color_palette.dart';
-
-import '../../../provider/menu_button_provider.dart';
+import '../../../../provider/menu_button_provider.dart';
 
 class CustomMenuButton extends StatefulWidget {
   const CustomMenuButton({super.key});
@@ -65,7 +64,7 @@ class _CustomMenuButtonState extends State<CustomMenuButton> {
         decoration: BoxDecoration(
           gradient: isSelected
               ? const LinearGradient(
-            colors: [Color(0xFF8338EC), Color(0xFFD048F7)],
+            colors: AppColors.gradiantButton,
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           )

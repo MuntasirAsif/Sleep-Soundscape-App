@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:soundscape/core/theme/theme_extensions/color_palette.dart';
+import '../../../../provider/category_provider.dart';
 
-import '../../../provider/category_provider.dart';
 class CategoryMenu extends StatelessWidget {
   final List<String> categories = ["All", "Rain", "Water", "Wind", "Instrument"];
 
@@ -17,20 +18,20 @@ class CategoryMenu extends StatelessWidget {
             children: categories.map((category) {
               bool isSelected = provider.selectedCategory == category;
               return GestureDetector(
-                onTap: () => provider.selectCategory(category),
+                onTap: () => provider.selectCategory(context,category),
                 child: Container(
                   padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
                   margin: const EdgeInsets.symmetric(horizontal: 6),
                   decoration: BoxDecoration(
                     gradient: isSelected
                         ? const LinearGradient(
-                      colors: [Color(0xFF8338EC), Color(0xFFD048F7)],
+                      colors: AppColors.gradiantButton,
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
                     )
                         : null,
                     borderRadius: BorderRadius.circular(20),
-                    border: Border.all(color: Colors.white.withOpacity(0.2)),
+                    border: Border.all(color: AppColors.whiteColor.withOpacity(0.08),width: 2),
                     color: isSelected ? null : Colors.transparent,
                   ),
                   child: Text(

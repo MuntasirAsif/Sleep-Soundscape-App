@@ -40,6 +40,8 @@ dependencies:
   go_router: ^14.8.1
   google_fonts: ^6.2.1
   gap: ^3.0.1
+  just_audio: ^0.9.46
+  shared_preferences: ^2.3.3
 
 dev_dependencies:
   flutter_test:
@@ -69,6 +71,8 @@ flutter:
     - assets/icon/bottom_bar/active/
     - assets/image/background/
     - assets/icon/home_screen/
+    - assets/icon/sound_category/
+    - assets/icon/floating_button/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

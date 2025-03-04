@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:provider/provider.dart';
-import '../../core/constant/icons.dart';
-import '../../core/constant/spacing.dart';
-import '../../core/theme/theme_extensions/color_palette.dart';
-import '../provider/search_provider.dart';
+import '../../../../../core/constant/icons.dart';
+import '../../../../../core/constant/spacing.dart';
+import '../../../../../core/theme/theme_extensions/color_palette.dart';
+import '../../../../provider/search_provider.dart';
 
 class SearchCard extends StatelessWidget {
   const SearchCard({super.key});
@@ -26,6 +26,7 @@ class SearchCard extends StatelessWidget {
                     width: AppSpacing.screenWidth(context) * 0.9,
                     child: TextFormField(
                       controller: provider.controller,
+                      onChanged: (query) => provider.search(context, query), // ✅ Call search
                       autofocus: true,
                       decoration: InputDecoration(
                         hintText: "Search",

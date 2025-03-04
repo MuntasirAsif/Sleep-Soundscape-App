@@ -25,4 +25,20 @@ class AppIcons {
   // Home Screen
   static const String upgradeLock = 'assets/icon/home_screen/upgrade_lock.svg';
   static const String searchIcon = 'assets/icon/home_screen/search-normal.svg';
+
+  //sound icon By category
+  static const String defaultIcon = 'assets/icon/sound_category/Typhoon.svg';
+  static const String rain = 'assets/icon/sound_category/Sleet.svg';
+  static const String water = 'assets/icon/sound_category/drums.svg';
+  static const String wind = 'assets/icon/sound_category/Heavy Sandstorm.svg';
+  static const String instrument =
+      'assets/icon/sound_category/Heavy Sandstorm.svg';
+
+  //floating button
+  static const String settings = 'assets/icon/floating_button/setting-3.svg';
+  static const String heardAdd = 'assets/icon/floating_button/heart-add.svg';
+  static const String closeCircle =
+      'assets/icon/floating_button/close-circle.svg';
+  static const String edit =
+      'assets/icon/floating_button/edit.svg';
 }
